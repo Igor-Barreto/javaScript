@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR?</title>
+    <style>
+        body{
+            background-color: rgb(204, 61, 120);
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou estrangeiro?</h1>
+Qual país você mora? <input type="text" name="txt1" id="txt1">    
+<input type="button" value="verificar" onclick="conferir()">
+<div id="txt2">Resultado: 
+
+</div>
+<script>
+    var pais = window.document.querySelector('input#txt1')
+    var res = window.document.querySelector('div#txt2')
+
+    function conferir(){    
+        if(pais.value == 'Brasil'){
+            res.innerHTML = `Mora no ${pais.value}, entao, brasileiro!`
+        }else{
+            res.innerHTML = `Mora em ${pais.value}, entao, Estrangeiro!!`
+        }
+    }
+</script>
+</body>
+</html>
